@@ -1,20 +1,11 @@
+#ifndef LISTGRAPH3_H
+#define LISTGRAPH3_H
 
 #include <cstdlib>
 #include <unordered_map>
 #include <vector>
 
-
-struct IGraph {
-    virtual ~IGraph() {}
-        
-    virtual void AddEdge(int from, int to) = 0;
-
-    virtual int VerticesCount() const  = 0;
-
-    virtual std::vector<int> GetNextVertices(int vertex) const = 0;
-    virtual std::vector<int> GetPrevVertices(int vertex) const = 0;
-};
-
+#include "graph.h"
 
 class SetGraph : public IGraph {
 public:
@@ -30,3 +21,5 @@ public:
 private:
     std::unordered_map<int, std::vector<int> > map_;
 };
+
+#endif

@@ -1,8 +1,11 @@
-#include <vector>
+#ifndef LISTGRAPH1_H
+#define LISTGRAPH1_H
+
 #include <vector>
 #include <algorithm>
 #include <queue>
 
+#include "graph.h"
 
 class CListGraph : public IGraph
 {
@@ -24,3 +27,5 @@ private:
     std::vector< std::vector<int> > graph;
     int vertices_count;
 };
+
+#endif 

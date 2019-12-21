@@ -1,16 +1,11 @@
+#ifndef LISTGRAPH2_H
+#define LISTGRAPH2_H
+
+
 #include <vector>
 #include <cstdlib>
 
-struct IGraph {
-    virtual ~IGraph() {}
-        
-    virtual void AddEdge(int from, int to) = 0;
-
-    virtual int VerticesCount() const  = 0;
-
-    virtual std::vector<int> GetNextVertices(int vertex) const = 0;
-    virtual std::vector<int> GetPrevVertices(int vertex) const = 0;
-};
+#include "graph.h"
 
 
 class MatrixGraph : public IGraph {
@@ -27,3 +22,5 @@ public:
 private:
     std::vector<std::vector<bool> > matrix_;
 };
+
+#endif
