@@ -27,7 +27,7 @@ void run(std::istream &input, std::ostream &output) {
 
     int from = 0;
     int to = 0;
-    for ( size_t iii = 0; iii < edges; ++iii ) {
+    for ( size_t i = 0; i < edges; ++i ) {
         input >> from >> to;
         graph.AddEdge(from, to);
     }
@@ -57,7 +57,7 @@ void run_amount(std::istream &input, std::ostream &output) {
 
     int from = 0;
     int to = 0;
-    for ( size_t iii = 0; iii < edges; ++iii ) {
+    for ( size_t i = 0; i < edges; ++i ) {
         input >> from >> to;
         graph.AddEdge(from, to);
     }
